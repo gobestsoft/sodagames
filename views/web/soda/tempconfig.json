@@ -1,0 +1,9 @@
+﻿[{
+	name:  'sodagames', // 可以为中文或英文4-10个字符
+    alias : 'doraTempDemo', // 必须为4-10个字符的英文
+    version : 'v1.0.2', // 照demo格式填写
+    sImg: '/images/demo.jpg', // 指向disk目录下的images文件夹
+    author: 'gobestsoft', // 作者名字4-10个字符
+    comment : '上海开放数据创新大赛' //4-30个字符
+
+}]

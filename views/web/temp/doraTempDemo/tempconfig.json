@@ -1,0 +1,9 @@
+﻿[{
+	name:  'doraTemp', // 可以为中文或英文4-10个字符
+    alias : 'doraTempDemo', // 必须为4-10个字符的英文
+    version : 'v1.0.2', // 照demo格式填写
+    sImg: '/images/demo.jpg', // 指向disk目录下的images文件夹
+    author: 'wangxiaoer', // 作者名字4-10个字符
+    comment : '该主题为测试主题，主要测试上传操作是否正常' //4-30个字符
+
+}]
