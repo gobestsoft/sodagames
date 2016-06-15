@@ -9,16 +9,16 @@ module.exports = {
     // debug 为 true 时，用于本地调试
     debug: true ,
     imgZip : true, // 上传图片是否压缩(如果为false则本地不需要安装gm)
-    session_secret: 'doracms_secret', // 务必修改
-    auth_cookie_name: 'doracms',
-    encrypt_key : 'dora',
+    session_secret: 'sodagames_session_secret', // 务必修改
+    auth_cookie_name: 'sodagames_cookie',
+    encrypt_key : 'sodagames',
 //    数据库配置
-    URL: 'mongodb://127.0.0.1:27017/doracms',
-    DB: 'doracms',
-    HOST: '',
+    URL: 'mongodb://103.24.119.109:27017/sodagames',
+    DB: 'sodagames',
+    HOST: '103.24.119.109',
     PORT: 27017,
-    USERNAME: '',
-    PASSWORD: '',
+    USERNAME: 'sodagames',
+    PASSWORD: 'sodagames',
 
 
 //    站点基础信息配置
@@ -30,8 +30,8 @@ module.exports = {
     UPDATEFOLDER : process.cwd()+'/public/upload', // 默认上传文件夹本地路径
     TEMPSTATICFOLDER : process.cwd()+'/public/themes/', // 模板静态文件路径
     DATAOPERATION : process.cwd()+'/models/db/bat', //数据库操作脚本目录
-    DATABACKFORDER : 'C:/softbak/mongodbConfig/mongodata/', // 服务端数据备份目录
-    MONGODBEVNPATH : '/usr/local/mongodb/bin', // LINUXmongodb环境变量(win server下不用管)
+    DATABACKFORDER : '/usr/local/mongodb/mongodata/', // 服务端数据备份目录
+    MONGODBEVNPATH : '/usr/local/bin', // LINUXmongodb环境变量(win server下不用管)
     SYSTEMTEMPFORDER : process.cwd()+'/views/web/temp/', // 系统模板安装目录
     DORACMSAPI : 'http://api.html-js.cn', // 系统服务提供商
     CMSDISCRIPTION : '前端开发俱乐部,分享前端知识,丰富前端技能。汇集国内专业的前端开发文档,为推动业内前端开发水平共同奋斗。html,js,css,nodejs,前端开发,jquery,web前端, web前端开发, 前端开发工程师',
