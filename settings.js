@@ -4,7 +4,7 @@
 
 
 module.exports={
-    cookieSecret:"doracms",
-    db:"doracms",
+    cookieSecret:"sodagames",
+    db:"sodagames",
     host:"localhost"
 }

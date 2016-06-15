@@ -3,7 +3,8 @@
  * 创建数据库连接
  * 该模块只会被加载一次
  */
-
+//var DEFAULT_SERVER_HOST="127.0.0.1";
+var DEFAULT_SERVER_HOST="103.24.119.109";
 module.exports = {
 
     // debug 为 true 时，用于本地调试
@@ -13,12 +14,12 @@ module.exports = {
     auth_cookie_name: 'sodagames_cookie',
     encrypt_key : 'sodagames',
 //    数据库配置
-    URL: 'mongodb://103.24.119.109:27017/sodagames',
+    URL: 'mongodb://sodagamesuser:SodaGames_123$%^&@'+DEFAULT_SERVER_HOST+':27017/sodagames',
     DB: 'sodagames',
-    HOST: '103.24.119.109',
+    HOST: DEFAULT_SERVER_HOST,
     PORT: 27017,
-    USERNAME: 'sodagames',
-    PASSWORD: 'sodagames',
+    USERNAME: 'sodagamesuser',
+    PASSWORD: 'SodaGames_123$%^&',
 
 
 //    站点基础信息配置
@@ -68,7 +69,7 @@ module.exports = {
     regUsersList: ['userManage_user','注册用户管理'],
 
 //    本地缓存设置
-    redis_host: '103.24.119.109',
+    redis_host: DEFAULT_SERVER_HOST,
     redis_port: 6379,
     redis_psd : '',
     redis_db: 0,
