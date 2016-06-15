@@ -1,17 +1,581 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-9 left-frame">
-                <% include public/itemListTemp %>
-                <% include public/pagination %>
-            </div>
-            <div class="col-md-3 right-frame">
-                <% include public/searchBoard %>
-                <% include public/cateList %>
-                <% include public/hotNewsList %>
-                <% include public/tagsList %>
-                <% include public/friendLink %>
+<section id="def_1" class="def_block">
+    <div id="reg-main" class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div id="reg-block">
+                <img src="/themes/<%=staticforder%>/images/index/logo_large.png">
+                <div id="slogan">科赛，专业的大数据竞赛平台</div>
+                <form id="reg-form" action="#">
+                    <div id="toReg" class="row">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="姓" name="reg-name-0" required class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="名" name="reg-name-1" required class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="email" placeholder="邮箱地址" name="reg-email" required class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="password" placeholder="输入密码" name="reg-password" required class="form-control">
+                        </div>
+                        <div class="col-md-12 hide">
+                            <input type="password" placeholder="重复密码" name="reg-confirm-password" required class="form-control">
+                        </div>
+                        <div class="col-md-6 hide">
+                            <img src="" style="height: 34px; cursor: pointer" class="captcha">
+                        </div>
+                        <div class="col-md-6 hide">
+                            <input type="text" placeholder="输入验证码" name="captcha" required class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="alert alert-danger invalid-msg"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn reg-start-btn">免费注册</button>
+                        </div>
+                        <div style="margin-bottom: 10px" class="col-md-12">
+                            <a href="javascript:;" id="reg-to-login">已经注册？点击登录</a>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="javascript:;" style="font-size: 0.8em" class="sendEmail">重新发送激活邮件</a>
+                        </div>
+                    </div>
+                </form>
+                <form action="#" class="login-form">
+                    <div id="toLogin" class="row mobile">
+                        <div class="col-md-12">
+                            <input type="email" placeholder="邮箱地址" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="password" placeholder="输入密码" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="alert alert-danger invalid-msg"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn">登录</button>
+                        </div>
+                        <div style="margin-bottom: 10px" class="col-md-12">
+                            <a href="javascript:;" id="login-to-reg">没有账号？点击注册</a>
+                        </div>
+                        <div class="col-md-12">
+                            <a target="_blank" href="forget_password.html" tppabs="http://www.kesci.com/auth/forget" style="font-size: 0.8em">忘记密码？</a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
+    <div id="reg-flexslider" class="reg-block flexslider">
+        <ul class="slides">
+            <li>
+                <div class="wrapper">
+                    <div class="title t-blue">完成注册还有最后一步</div><hr>
+                    <span class="t-black">请选择您的角色</span>
+                    <div class="job-list job-list-1">
+                        <div class="job-wrapper">
+                            <div data-job="programmer" data-id="4" class="job programmer">
+                                程序员
+                                <div class="check-flag-wrapper">
+                                    <div class="check-flag"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-wrapper">
+                            <div data-job="designer" data-id="3" class="job designer">设计师
+                                <div class="check-flag-wrapper"><div class="check-flag"></div></div></div></div><div class="job-wrapper"><div data-job="analyst" data-id="2" class="job analyst">数据分析师<div class="check-flag-wrapper"><div class="check-flag"></div></div></div></div>
+                    </div><div class="job-list job-list-2"><div class="job-wrapper"><div data-job="pm" data-id="1" class="job pm">产品经理<div class="check-flag-wrapper"><div class="check-flag"></div></div></div></div><div class="job-wrapper"><div data-job="others" data-id="0" class="job others">其他角色<div class="check-flag-wrapper"><div class="check-flag"></div></div></div></div></div><div style="clear: both"></div><div class="mid-block desp-programmer"><div class="role-title programmer">程序员</div>你在键盘上舞动着指尖，一行行代码汇聚成充满活力的程序<br>你，就是那个能将想法变为现实的编程高手！</div><div class="mid-block hidden desp-designer"><div class="role-title designer">设计师</div>你玩转视觉、驾驭用户体验，一次次灵感交织成无限精彩<br>你，就是那个游走在感性与理性世界里的设计大师！</div><div class="mid-block hidden desp-analyst"><div class="role-title analyst">数据分析师</div>你在大数据的海洋中徜徉，将新的数据洞察带入我们视野<br>你，就是那个能透视事物本质、用数据改变世界的数据分析大师！</div><div class="mid-block hidden desp-pm"><div class="role-title pm">产品经理</div>你从用户中来到用户中去，想用一个产品点亮整个世界<br>你，就是那个能洞悉用户需求、打造极致体验的的产品设计大师！</div><div class="mid-block hidden desp-others"><div class="role-title others">其他职业</div>你有独特的视角和经历，你的加入让团队更加强大<br>无论你来自学界、政界还是商界，你为团队创造独一无二的价值！</div><div class="buttons"><hr><button class="btn submit-role-normal">下一步</button></div>
+                </div>
+            </li>
+            <li>
+                <div class="wrapper">
+                    <div class="title t-blue">完成注册还有最后一步</div><hr><span class="t-black">请添加您的技能</span><div class="skill-block">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="skill-list-wrapper">
+                                    <div data-role="4" class="l1">程序员</div><div class="l2-wrapper">
+                                        <div data-id="56cd882330fed49d021538eb" id="56cd882330fed49d021538eb" class="l2">Javascript</div>
+                                        <div data-id="56cd882330fed49d021538ec" id="56cd882330fed49d021538ec" class="l2">HTML</div>
+                                        <div data-id="56cd882330fed49d021538ef" id="56cd882330fed49d021538ef" class="l2">Scala</div>
+                                        <div data-id="56cd882330fed49d021538ed" id="56cd882330fed49d021538ed" class="l2">CSS</div>
+                                        <div data-id="56cd882330fed49d021538ee" id="56cd882330fed49d021538ee" class="l2">Python</div>
+                                        <div data-id="56cd882330fed49d021538f0" id="56cd882330fed49d021538f0" class="l2">Java</div>
+                                        <div data-id="56cd882330fed49d021538f1" id="56cd882330fed49d021538f1" class="l2">PHP</div>
+                                        <div data-id="56cd882330fed49d021538f2" id="56cd882330fed49d021538f2" class="l2">R </div>
+                                        <div data-id="56cd882330fed49d021538f4" id="56cd882330fed49d021538f4" class="l2">Node.js</div>
+                                        <div data-id="56cd882330fed49d021538f5" id="56cd882330fed49d021538f5" class="l2">C#</div>
+                                        <div data-id="56cd882330fed49d021538f6" id="56cd882330fed49d021538f6" class="l2">.NET</div>
+                                        <div data-id="56cd882330fed49d021538f7" id="56cd882330fed49d021538f7" class="l2">C/C++</div>
+                                        <div data-id="56cd882330fed49d021538f8" id="56cd882330fed49d021538f8" class="l2">Ruby</div>
+                                        <div data-id="56cd882330fed49d021538f9" id="56cd882330fed49d021538f9" class="l2">Go</div>
+                                        <div data-id="56cd882330fed49d021538fb" id="56cd882330fed49d021538fb" class="l2">微信开发</div>
+                                        <div data-id="56cd882330fed49d021538fa" id="56cd882330fed49d021538fa" class="l2">Android开发</div>
+                                        <div data-id="56cd882330fed49d021538fc" id="56cd882330fed49d021538fc" class="l2">PC端开发</div>
+                                        <div data-id="56cd882330fed49d021538fd" id="56cd882330fed49d021538fd" class="l2">iOS开发</div>
+                                        <div data-id="56cd882330fed49d021538fe" id="56cd882330fed49d021538fe" class="l2">关系型数据库</div>
+                                        <div data-id="56cd882330fed49d021538ff" id="56cd882330fed49d021538ff" class="l2">NoSQL</div>
+                                        <div data-id="56cd882330fed49d02153900" id="56cd882330fed49d02153900" class="l2">NewSQL</div>
+                                        <div data-id="56cd882330fed49d02153901" id="56cd882330fed49d02153901" class="l2">Hbase</div>
+                                        <div data-id="56cd882330fed49d02153902" id="56cd882330fed49d02153902" class="l2">Kafka</div>
+                                        <div data-id="56cd882330fed49d02153903" id="56cd882330fed49d02153903" class="l2">Hive</div>
+                                        <div data-id="56cd882330fed49d02153904" id="56cd882330fed49d02153904" class="l2">Strom</div>
+                                        <div data-id="56cd882330fed49d02153905" id="56cd882330fed49d02153905" class="l2">Graphlab</div>
+                                        <div data-id="56cd882330fed49d02153906" id="56cd882330fed49d02153906" class="l2">Spark</div>
+                                        <div data-id="56cd882330fed49d02153907" id="56cd882330fed49d02153907" class="l2">Hadoop</div>
+                                        <div data-id="56cd95241d232b7a3b503c3b" id="56cd95241d232b7a3b503c3b" class="l2">web开发</div>
+                                    </div>
+                                    <div data-role="3" class="l1">设计师</div>
+                                    <div class="l2-wrapper">
+                                        <div data-id="56cd882330fed49d021538df" id="56cd882330fed49d021538df" class="l2">移动端设计</div>
+                                        <div data-id="56cd882330fed49d021538e0" id="56cd882330fed49d021538e0" class="l2">响应式设计</div>
+                                        <div data-id="56cd882330fed49d021538e1" id="56cd882330fed49d021538e1" class="l2">网站设计</div>
+                                        <div data-id="56cd882330fed49d021538e3" id="56cd882330fed49d021538e3" class="l2">平面设计</div>
+                                        <div data-id="56cd882330fed49d021538e4" id="56cd882330fed49d021538e4" class="l2">用户界面设计（UI）</div>
+                                        <div data-id="56cd882330fed49d021538e5" id="56cd882330fed49d021538e5" class="l2">用户体验设计（UX）</div>
+                                        <div data-id="56cd882330fed49d021538e7" id="56cd882330fed49d021538e7" class="l2">交互设计（IxD）</div>
+                                        <div data-id="56cd882330fed49d021538e6" id="56cd882330fed49d021538e6" class="l2">可用性测试</div>
+                                        <div data-id="56cd882330fed49d021538e8" id="56cd882330fed49d021538e8" class="l2">信息架构（IA）</div>
+                                        <div data-id="56cd882330fed49d021538e9" id="56cd882330fed49d021538e9" class="l2">信息图设计</div>
+                                        <div data-id="56cd882330fed49d021538ea" id="56cd882330fed49d021538ea" class="l2">PPT设计</div>
+                                    </div>
+                                    <div data-role="2" class="l1">数据分析师</div>
+                                    <div class="l2-wrapper">
+                                        <div data-id="56cd95231d232b7a3b503c37" id="56cd95231d232b7a3b503c37" class="l2">SAS</div>
+                                        <div data-id="56cd95241d232b7a3b503c38" id="56cd95241d232b7a3b503c38" class="l2">SPSS</div>
+                                        <div data-id="56cd95241d232b7a3b503c39" id="56cd95241d232b7a3b503c39" class="l2">Tableau</div>
+                                        <div data-id="56cd95241d232b7a3b503c3a" id="56cd95241d232b7a3b503c3a" class="l2">图像挖掘</div>
+                                        <div data-id="56cd882230fed49d021538bd" id="56cd882230fed49d021538bd" class="l2">爬虫</div>
+                                        <div data-id="56cd882230fed49d021538be" id="56cd882230fed49d021538be" class="l2">关系型数据库</div>
+                                        <div data-id="56cd882230fed49d021538c1" id="56cd882230fed49d021538c1" class="l2">数据清洗</div>
+                                        <div data-id="56cd882230fed49d021538c2" id="56cd882230fed49d021538c2" class="l2">机器学习</div>
+                                        <div data-id="56cd882230fed49d021538c3" id="56cd882230fed49d021538c3" class="l2">文本挖掘/自然语言处理</div>
+                                        <div data-id="56cd882230fed49d021538c5" id="56cd882230fed49d021538c5" class="l2">社交网络分析</div>
+                                        <div data-id="56cd882230fed49d021538c6" id="56cd882230fed49d021538c6" class="l2">网站分析</div>
+                                        <div data-id="56cd882230fed49d021538c4" id="56cd882230fed49d021538c4" class="l2">日志分析</div>
+                                        <div data-id="56cd882230fed49d021538c7" id="56cd882230fed49d021538c7" class="l2">商业分析</div>
+                                        <div data-id="56cd882230fed49d021538c8" id="56cd882230fed49d021538c8" class="l2">GIS数据分析</div>
+                                        <div data-id="56cd882230fed49d021538c9" id="56cd882230fed49d021538c9" class="l2">金融数据分析</div>
+                                        <div data-id="56cd882230fed49d021538ca" id="56cd882230fed49d021538ca" class="l2">实时数据分析</div>
+                                        <div data-id="56cd882230fed49d021538cb" id="56cd882230fed49d021538cb" class="l2">分类</div>
+                                        <div data-id="56cd882230fed49d021538cc" id="56cd882230fed49d021538cc" class="l2">聚类</div>
+                                        <div data-id="56cd882230fed49d021538cd" id="56cd882230fed49d021538cd" class="l2">回归</div>
+                                        <div data-id="56cd882230fed49d021538ce" id="56cd882230fed49d021538ce" class="l2">主成分分析</div>
+                                        <div data-id="56cd882230fed49d021538cf" id="56cd882230fed49d021538cf" class="l2">因子分析</div>
+                                        <div data-id="56cd882230fed49d021538d0" id="56cd882230fed49d021538d0" class="l2">数学建模</div>
+                                        <div data-id="56cd882230fed49d021538d1" id="56cd882230fed49d021538d1" class="l2">最优化</div>
+                                        <div data-id="56cd882230fed49d021538d2" id="56cd882230fed49d021538d2" class="l2">数据分析写作</div>
+                                        <div data-id="56cd882230fed49d021538d3" id="56cd882230fed49d021538d3" class="l2">数据可视化</div>
+                                        <div data-id="56cd882230fed49d021538d4" id="56cd882230fed49d021538d4" class="l2">推荐系统</div>
+                                        <div data-id="56cd882230fed49d021538d5" id="56cd882230fed49d021538d5" class="l2">RapidMiner</div>
+                                        <div data-id="56cd882230fed49d021538d7" id="56cd882230fed49d021538d7" class="l2">Knime</div>
+                                        <div data-id="56cd882230fed49d021538d8" id="56cd882230fed49d021538d8" class="l2">Storm</div>
+                                        <div data-id="56cd882230fed49d021538d9" id="56cd882230fed49d021538d9" class="l2">Weka</div>
+                                        <div data-id="56cd882230fed49d021538dd" id="56cd882230fed49d021538dd" class="l2">R</div>
+                                        <div data-id="56cd882230fed49d021538de" id="56cd882230fed49d021538de" class="l2">Excel</div>
+                                    </div>
+                                    <div data-role="1" class="l1">产品经理</div>
+                                    <div class="l2-wrapper">
+                                        <div data-id="56cd882230fed49d021538b7" id="56cd882230fed49d021538b7" class="l2">运营数据分析</div>
+                                        <div data-id="56cd882230fed49d021538b8" id="56cd882230fed49d021538b8" class="l2">产品文档书写</div>
+                                        <div data-id="56cd882230fed49d021538b9" id="56cd882230fed49d021538b9" class="l2">市场分析</div>
+                                        <div data-id="56cd882230fed49d021538ba" id="56cd882230fed49d021538ba" class="l2">需求分析</div>
+                                        <div data-id="56cd882230fed49d021538bb" id="56cd882230fed49d021538bb" class="l2">产品设计</div>
+                                        <div data-id="56cd882230fed49d021538bc" id="56cd882230fed49d021538bc" class="l2">产品规划</div>
+                                    </div>
+                                    <div data-role="0" class="l1">其他角色</div>
+                                    <div class="l2-wrapper">
+                                        <div data-id="56cd882230fed49d021538a6" id="56cd882230fed49d021538a6" class="l2">可行性分析</div>
+                                        <div data-id="56cd882230fed49d021538a7" id="56cd882230fed49d021538a7" class="l2">金融分析</div>
+                                        <div data-id="56cd882230fed49d021538a8" id="56cd882230fed49d021538a8" class="l2">管理咨询</div>
+                                        <div data-id="56cd882230fed49d021538aa" id="56cd882230fed49d021538aa" class="l2">活动策划</div>
+                                        <div data-id="56cd882230fed49d021538a9" id="56cd882230fed49d021538a9" class="l2">文案策划</div>
+                                        <div data-id="56cd882230fed49d021538ab" id="56cd882230fed49d021538ab" class="l2">客户服务</div>
+                                        <div data-id="56cd882230fed49d021538ac" id="56cd882230fed49d021538ac" class="l2">法律咨询</div>
+                                        <div data-id="56cd882230fed49d021538ae" id="56cd882230fed49d021538ae" class="l2">实验设计</div>
+                                        <div data-id="56cd882230fed49d021538ad" id="56cd882230fed49d021538ad" class="l2">学术写作</div>
+                                        <div data-id="56cd882230fed49d021538af" id="56cd882230fed49d021538af" class="l2">人力资源管理</div>
+                                        <div data-id="56cd882230fed49d021538b0" id="56cd882230fed49d021538b0" class="l2">供应链管理</div>
+                                        <div data-id="56cd882230fed49d021538b1" id="56cd882230fed49d021538b1" class="l2">数字化营销</div>
+                                        <div data-id="56cd882230fed49d021538b2" id="56cd882230fed49d021538b2" class="l2">PPT制作</div>
+                                        <div data-id="56cd882230fed49d021538b3" id="56cd882230fed49d021538b3" class="l2">市场营销</div>
+                                        <div data-id="56cd882230fed49d021538b4" id="56cd882230fed49d021538b4" class="l2">市场调研</div>
+                                        <div data-id="56cd882230fed49d021538b5" id="56cd882230fed49d021538b5" class="l2">项目管理</div>
+                                        <div data-id="56cd882230fed49d021538b6" id="56cd882230fed49d021538b6" class="l2">财务管理</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="skill-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <hr>
+                        <button class="btn reg-prev-btn">上一步</button>
+                        <button id="submit-skill" class="btn">完成提交</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="wrapper">
+                    <div class="reg-success">注册成功，请登录注册邮箱验证您的账户</div>
+                    <br>未收到激活邮件?<a href="javascript:;" class="sendEmail">重新发送</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="def_2" class="def_block">
+    <img src="/themes/<%=staticforder%>/images/index/2/5.png"  style="width: 98.125%; left: 0;" class="layer layer5">
+    <img src="/themes/<%=staticforder%>/images/index/2/4.png" style="width: 12.65625%; left: 0; right: 0; margin: 0 auto;" class="layer layer4">
+    <img src="/themes/<%=staticforder%>/images/index/2/3.png"  style="width: 84.375%; left: 18.33%;" class="layer layer3">
+    <img src="/themes/<%=staticforder%>/images/index/2/2.png"  style="width: 86.5625%; left: 40px;" class="layer layer2">
+    <img src="/themes/<%=staticforder%>/images/index/2/1.png" style="width: 70.42%; left: -10px;" class="layer layer1">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="title t-blue">每一位青年，都是一张白纸</div>
+            <div class="desp t-gray">
+                在科赛，我们相信每位青年最初都是一张白纸，
+                <br />
+                在一次次竞赛中历练和蜕变，<br />
+                终有一天成为翱翔天际的千纸鹤，无限未来不是梦！
+            </div>
+        </div>
+    </div>
+</section>
+<section id="def_3" class="def_block">
+    <img src="/themes/<%=staticforder%>/images/index/3/1-1.png" style="width: 97.3958%; left: 0px;" class="layer layer1">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="title">每一场比赛，都是一次机会</div>
+            <div class="desp">
+                在科赛，我们组织专业的大数据竞赛，<br>
+                整合独家的数据资源、丰厚的奖金和就业、创业机会，<br>
+                每一场比赛，都是为你精心打造的舞台，期待脱颖而出的你！<br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div id="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="/themes/<%=staticforder%>/images/index/3/unicom-image-910.png" >
+                    </li>
+                    <li>
+                        <img src="/themes/<%=staticforder%>/images/index/3/PPD-910x220-v2.jpg" >
+                    </li>
+                    <li>
+                        <img src="/themes/<%=staticforder%>/images/index/3/SODA-910x220.jpg" >
+                    </li>
+                    <li>
+                        <img src="/themes/<%=staticforder%>/images/index/3/EMC 910 200.jpg" >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <button class="btn to-reg">寻找更多比赛</button>
+        </div>
+    </div>
+</section>
+<section id="def_4" class="def_block">
+    <img src="/themes/<%=staticforder%>/images/index/4/6.png" style="width: 76.0416%; left: -1.7708%;" class="layer layer6">
+    <img src="/themes/<%=staticforder%>/images/index/4/5-1.png" style="width: 6.61458%; left: 67.1875%;" class="layer layer5">
+    <img src="/themes/<%=staticforder%>/images/index/4/4-1.png"  style="width: 66.7708%; left: 14.8958%;" class="layer layer4">
+    <img src="/themes/<%=staticforder%>/images/index/4/3-1.png" style="width: 8.5417%; left: 13.4375%;" class="layer layer3">
+    <img src="/themes/<%=staticforder%>/images/index/4/2-1.png"  style="width: 12.65625%; left: 79.21875%;" class="layer layer2">
+    <img src="/themes/<%=staticforder%>/images/index/4/1-2.png" style="width: 110%; left: -5.1042%;" class="layer layer1">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="title t-blue">每一个伙伴，都可能成为战友</div>
+            <div class="desp t-gray">
+                在科赛，我们聚集了一批优秀的小伙伴，<br>
+                他们是数据侠，是代码高手，<br class="mobile">
+                也是设计大师或者脑洞君，<br>你总能在这里找到最给力的队友，<br class="mobile">
+                和他们并肩作战、锐不可挡！<br>
+            </div>
+        </div>
+    </div>
+    <div id="users">
+        <div class="row users-container">
+            <div class="col-sm-6">
+                <div class="col-xs-4">
+                    <div data-id='0' style="background-image: url('/themes/<%=staticforder%>/images/index/4/1456592938772..jpg')" class="user active"></div>
+                    <div class="details-wrapper">
+                        <div class="arrow desktop"></div>
+                        <div class="arrow-shadow desktop"></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div data-id='1' style="background-image: url('/themes/<%=staticforder%>/images/index/4/1456592852717..jpg')" class="user"></div><div class="details-wrapper">
+                        <div class="arrow desktop"></div>
+                        <div class="arrow-shadow desktop"></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div data-id='2' style="background-image: url('/themes/<%=staticforder%>/images/index/4/1456592938458..jpg')" class="user"></div>
+                    <div class="details-wrapper">
+                        <div class="arrow desktop"></div>
+                        <div class="arrow-shadow desktop"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-xs-4">
+                    <div data-id='3' style="background-image: url('/themes/<%=staticforder%>/images/index/4/1456592836275..jpg')" class="user"></div><div class="details-wrapper"><div class="arrow desktop"></div><div class="arrow-shadow desktop"></div></div>
+                </div>
+                <div class="col-xs-4">
+                    <div data-id='4' style="background-image: url('/themes/<%=staticforder%>/images/index/4/4.jpg')" class="user"></div>
+                    <div class="details-wrapper">
+                        <div class="arrow desktop"></div>
+                        <div class="arrow-shadow desktop"></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div data-id='5' style="background-image: url('/themes/<%=staticforder%>/images/index/4/1456592849668..jpg')" class="user"></div>
+                    <div class="details-wrapper">
+                        <div class="arrow desktop"></div>
+                        <div class="arrow-shadow desktop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="user-0" class="details t-gray desktop">
+            <div class="row">
+                <div class="col-xs-3 name"><span>叶超</span></div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7 info">
+                    <div style="background-color: #4BD7C1" class="job">程序员</div>
+                    <div style="background-color: #F89A00" class="job">数据分析师</div>
+                    <div class="location">地点：上海</div>
+                </div>
+            </div><hr><div class="row">
+                <div class="col-md-12 competition">
+                    <span>当前比赛：暂无</span>
+                </div>
+                <div class="col-md-12 skill-list">
+                    <div class="skill">爬虫</div>
+                    <div class="skill">数据分析写作</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">Excel</div>
+                    <div class="skill">PPT制作</div>
+                    <div class="skill">学术写作</div>
+                </div>
+            </div>
+        </div>
+        <div id="user-1" class="details t-gray desktop">
+            <div class="row">
+                <div class="col-xs-3 name">
+                    <span>金建栋</span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7 info">
+                    <div style="background-color: #F89A00" class="job">数据分析师</div>
+                    <div style="background-color: #4BD7C1" class="job">程序员</div>
+                    <div class="location">地点：上海</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 competition">
+                    <span>当前比赛：“魔镜杯”数据产品开发大赛</span>
+                </div>
+                <div class="col-md-12 skill-list">
+                    <div class="skill">R</div>
+                    <div class="skill">python</div>
+                    <div class="skill">js</div>
+                    <div class="skill">html</div>
+                    <div class="skill">spark</div>
+                    <div class="skill">hadoop</div>
+                    <div class="skill">数据清洗</div>
+                    <div class="skill">机器学习</div>
+                </div>
+            </div>
+        </div>
+        <div id="user-2" class="details t-gray desktop">
+            <div class="row">
+                <div class="col-xs-3 name">
+                    <span>蒋军杰</span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7 info">
+                    <div style="background-color: #F89A00" class="job">数据分析师</div>
+                    <div class="location">地点：上海</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 competition">
+                    <span>当前比赛：暂无</span>
+                </div>
+                <div class="col-md-12 skill-list">
+                    <div class="skill">爬虫</div>
+                    <div class="skill">关系型数据库</div>
+                    <div class="skill">机器学习</div>
+                    <div class="skill">文本挖掘</div>
+                    <div class="skill">商业分析</div>
+                    <div class="skill">GIS数据分析</div>
+                    <div class="skill">分类</div>
+                </div>
+            </div>
+        </div>
+        <div id="user-3" class="details t-gray desktop">
+            <div class="row">
+                <div class="col-xs-3 name">
+                    <span>岑凯</span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7 info">
+                    <div style="background-color: #F89A00" class="job">数据分析师</div>
+                    <div style="background-color: #FF4176" class="job">设计师</div>
+                    <div class="location">地点：上海</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 competition">
+                    <span>当前比赛：暂无</span>
+                </div>
+                <div class="col-md-12 skill-list">
+                    <div class="skill">javascript</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">Spark</div>
+                    <div class="skill">网站设计</div>
+                    <div class="skill">PPT设计</div>
+                    <div class="skill">爬虫</div>
+                    <div class="skill">关系型数据库</div>
+                </div>
+            </div>
+        </div>
+        <div id="user-4" class="details t-gray desktop">
+            <div class="row">
+                <div class="col-xs-3 name">
+                    <span>魏晓聪</span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7 info">
+                    <div style="background-color: #F89A00" class="job">数据分析师</div>
+                    <div style="background-color: #80C300" class="job">产品经理</div>
+                    <div class="location">地点：北京</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 competition">
+                    <span>当前比赛：“魔镜杯”数据产品开发大赛</span>
+                </div>
+                <div class="col-md-12 skill-list">
+                    <div class="skill">聚类</div>
+                    <div class="skill">主成分分析</div>
+                    <div class="skill">因子分析</div>
+                    <div class="skill">数学建模</div>
+                    <div class="skill">数据分析写作</div>
+                    <div class="skill">EXCEL</div>
+                    <div class="skill">市场分析</div>
+                </div>
+            </div>
+        </div><div id="user-5" class="details t-gray desktop">
+            <div class="row">
+                <div class="col-xs-3 name">
+                    <span>朱铭璋</span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7 info">
+                    <div style="background-color: #B445BB" class="job">其他角色</div>
+                    <div style="background-color: #F89A00" class="job">数据分析师</div>
+                    <div class="location">地点：上海</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 competition">
+                    <span>当前比赛：“魔镜杯”风控算法大赛</span>
+                </div><div class="col-md-12 skill-list">
+                    <div class="skill">R</div>
+                    <div class="skill">C#</div>
+                    <div class="skill">Java</div>
+                    <div class="skill">数据清洗</div>
+                    <div class="skill">数据挖掘</div>
+                    <div class="skill">数学建模</div>
+                    <div class="skill">数据可视化分类</div>
+                    <div class="skill">聚类</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <button class="btn to-reg">点击寻找更多小伙伴</button>
+        </div>
+    </div>
+</section>
+<section id="def_5" class="def_block">
+    <img src="/themes/<%=staticforder%>/images/index/5/5-2.png"  style="width: 93.0729%; left: 6.9271%;" class="layer layer5">
+    <img src="/themes/<%=staticforder%>/images/index/5/4-2.png"  style="width: 82.23958%; left: 4.375%;" class="layer layer4">
+    <img src="/themes/<%=staticforder%>/images/index/5/3-2.png" style="width: 85.1041%; left: 11.09375%;" class="layer layer3">
+    <img src="/themes/<%=staticforder%>/images/index/5/2-2.png"  style="width: 100%; left: 0;" class="layer layer2">
+    <img src="/themes/<%=staticforder%>/images/index/5/1-3.png"  style="width: 100%; left: 0;" class="layer layer1">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="title">每一次成长，都有科赛陪伴</div>
+            <div class="desp">
+                在科赛，我们致力于数据人才的成长，<br>
+                我们记录你的每一次努力，<br class="mobile">
+                和你一起迈入数据创新的时代！
+            </div>
+        </div>
+    </div>
+</section>
+<section id="def_6" class="def_block">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <img src="/themes/<%=staticforder%>/images/index/logo_large.png" >
+            <div class="title">
+                加入科赛，从这一张白纸<br>
+                开始——
+            </div>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <img src="/themes/<%=staticforder%>/images/index/6/bird_normal.png" class="bird desktop">
+            <img src="/themes/<%=staticforder%>/images/index/6/bird.png" class="bird mobile">
+        </div>
+        <div class="col-sm-4 col-sm-offset-4">
+            <a href="javascript:;" class="to-reg">
+                <button class="btn">注册会员，翱翔的第一步</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script src="//cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
+<script src="//cdn.bootcss.com/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="//cdn.bootcss.com/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+<script src="//cdn.bootcss.com/flexslider/2.6.0/jquery.flexslider.min.js"></script>
+<script src="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '/themes/<%=staticforder%>/js/analytics.js'/*tpa=http://www.google-analytics.com/analytics.js*/, 'ga');
+    ga('create', 'UA-66360440-1');
+    ga('send', 'pageview');</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "http://hm.baidu.com/hm.js?d792e5f8684e7cfc2d590438a1611240"/*tpa=http://hm.baidu.com/hm.js?d792e5f8684e7cfc2d590438a1611240*/;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();</script>
+<script>
+    window.pageType = "normal";
+    window.competitionId = 0;</script>
+<script src="/themes/<%=staticforder%>/js/main.js-v=201606100257.js"></script>

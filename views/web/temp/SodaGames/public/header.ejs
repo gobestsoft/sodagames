@@ -2,39 +2,35 @@
 <!-- Place this tag right after the last button or just before your close body tag. -->
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
-<header class="clearfix" id="header">
-    <div class="container">
-        <div class="text-right topNav">
-            <ul>
+<section id="def_1">
+    <header id="top" role="banner" class="navbar navbar-static-top desktop">
+        <div class="container">
+            <a id="logo" href="/" tppabs="/">
+                <img src="/themes/<%=staticforder%>/images/logo.png" tppabs="/themes/<%=staticforder%>/images/logo.png">
+            </a>
             <% if(!logined){ %>
-                <li><a rel="nofollow" href="/users/login">登录</a></li>
-                <li><a rel="nofollow" href="/users/reg">注册</a></li>
+            <form id="login-form" action="#" class="clearfix login-form">
+                <div class="login-form-block">
+                    <input type="email" placeholder="邮箱地址" name="email" required class="form-control">
+                    <div class="checkbox text t-gray">
+                        <label><input type="checkbox">保持登陆状态</label>
+                    </div>
+                </div>
+                <div class="login-form-block">
+                    <input type="password" placeholder="密码" name="password" required class="form-control">
+                    <div class="text">
+                        <a target="_blank" href="forget_password.html" tppabs="http://www.kesci.com/auth/forget" class="t-gray">忘记密码？</a>
+                    </div>
+                </div>
+                <div class="login-form-block">
+                    <button type="submit" class="btn btn-login b-blue">登陆</button>
+                </div>
+                <div class="alert alert-danger invalid-msg"></div>
+            </form>
             <% }else{ %>
-
-                <li>您好&nbsp;<a href="/users/userCenter"><%=userInfo.userName%></a>
-                    <%if(userInfo.msg_count && userInfo.msg_count>0){%>
-                    <a href="/users/userMessage"><span class="badge" id="u_notify_num"><%=userInfo.msg_count%></span></a>
-                    <%}%>
-                </li>
-                <li><a rel="nofollow" href="#" id="userLoginOut">退出</a></li>
+                您好！！！
+                <a rel="nofollow" href="#" id="userLoginOut">退出</a>
             <% } %>
-            </ul>
         </div>
-        <div class="col-group">
-            <div class="site-name ">
-                <a href="/" id="logo"><img src="/themes/<%=staticforder%>/images/logo.png" width="162" height="40" alt="前端开发俱乐部"/></a></a>
-            </div>
-            <div class="site-nav">
-                <ul>
-                    <%for(var i=0;i<cateTypes.length;i++){%>
-                    <li id="nav_<%=cateTypes[i]._id%>"><a href="/<%=cateTypes[i].defaultUrl%>___<%=cateTypes[i]._id%>"><%=cateTypes[i].name%></a></li>
-                    <%}%>
-                    <li class="pull-right" style="padding-top: 8px">
-                        <!-- Place this tag where you want the button to render. -->
-                        <a aria-label="Star doramart/DoraCMS on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api="/repos/doramart/DoraCMS#stargazers_count" data-count-href="/doramart/DoraCMS/stargazers" href="https://github.com/doramart/DoraCMS" class="github-button">Star</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
+    </header>
+</section>

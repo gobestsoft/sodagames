@@ -1,10 +1,94 @@
 <!--尾部模板-->
-<div class="back-to-top" id="gotop">
-    <i class="glyphicon glyphicon-chevron-up"></i>
-</div>
-<footer id="footer">
-    <div class="container text-left">
-        自豪的采用&nbsp;<a href="https://github.com/doramart/DoraCMS" rel="nofollow" target="_blank" title="代码在这里">DoraCMS <%=siteConfig.version%></a>&nbsp;Copyright (c) 2015 &nbsp;<a
-                href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank"><%=siteConfig.siteIcp%></a> All Rights Reserved &nbsp;<a href="http://<%=myDomain%>/sitemap.html" target="_blank">站点地图</a>&nbsp;应用案例：<a href="http://www.dailyads.cn" target="_blank">每日一广告</a>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 footer-heading">合作伙伴</div>
+                    <div class="col-sm-4">
+                        <a href="javascript:if(confirm(%27http://omnilab.sjtu.edu.cn/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://omnilab.sjtu.edu.cn/%27"
+                           tppabs="http://omnilab.sjtu.edu.cn/" target="_blank" class="footer-link">Omnilab</a>
+                        <a style="white-space: nowrap;" class="footer-link">中国工业设计研究院</a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="javascript:;" data-toggle="tooltip" data-placement="right" data-html="true" data-trigger="click" data-container="body" title="" data-original-title="&lt;img src='/apps/shared/images/大数据文摘.jpeg' style='border: 1px solid white'&gt;" class="footer-link">大数据文摘</a><a href="javascript:if(confirm(%27http://www.xueqing.cc/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.xueqing.cc/%27" tppabs="http://www.xueqing.cc/" target="_blank" class="footer-link">雪晴数据网</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="index-1.htm" tppabs="http://www.kesci.com:2368/guan-yu-wo-men/" class="footer-link">关于我们</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="index-2.htm" tppabs="http://www.kesci.com:2368/chan-pin-jie-shao/" class="footer-link">产品介绍</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="index-3.htm" tppabs="http://www.kesci.com:2368/da-shi-ji-2/" class="footer-link">大事记</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footer-logo" class="col-sm-4">Kesci</div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="index-4.htm" tppabs="http://www.kesci.com:2368/" class="footer-link">官方博客</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="index-5.htm" tppabs="http://www.kesci.com:2368/lian-xi-wo-men/" class="footer-link">联系我们</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="index-6.htm" tppabs="http://www.kesci.com:2368/yin-si-zheng-ce/" class="footer-link">隐私政策</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-ICP"><%=siteConfig.siteIcp%></div>
+            </div>
+            <div class="col-sm-2">
+                <img id="qr" src="/themes/<%=staticforder%>/images/qr.jpg" width="90" height="90" class="footer-qrcode">
+                <div class="footer-heading">微信公众平台</div>
+            </div>
+        </div>
     </div>
 </footer>
+<div id="pin-div">
+    <div id="pin-div-button" onclick="$('#pin-div-content').toggle();">
+        意见<br>
+        反馈
+    </div>
+    <div id="pin-div-content" style="display:none">
+        <form id="feedback-form" action="http://www.kesci.com/feedbacks" method="post" target="_blank">
+            <div class="form-group">
+                <label class="control-label">意见类型:</label>
+                <select name="Type" required="" class="form-control">
+                    <option value="报告问题" selected="selected" label="报告问题">报告问题</option>
+                    <option value="对功能有疑问" label="对功能有疑问">对功能有疑问</option>
+                    <option value="吐个槽" label="吐个槽">吐个槽</option>
+                    <option value="点个赞" label="点个赞">点个赞</option>
+                    <option value="分享好点子" label="分享好点子">分享好点子</option>
+                    <option value="其它" label="其它">其它</option>
+                </select>
+            </div>
+            <input value="_" name="Url" style="display:none">
+            <div class="form-group">
+                <label class="control-label">您的邮箱:</label>
+                <input value="" name="Email" type="email" placeholder="请在此处填写您的邮箱" required="" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">您的意见:</label>
+                <textarea value="" name="Content" placeholder="请在此处填写您的意见" rows="5" required="" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="control-label">验证码:</label>
+                <input value="" name="Captcha" type="text" placeholder="请填写验证码" required="" class="form-control">
+            </div>
+            <div class="form-group">
+                <img src="" style="height: 34px; cursor: pointer; display: block;" class="captcha">
+            </div>
+            <button type="submit" class="btn btn-primary">提 交</button>
+            <button type="reset" onclick="$('#pin-div-content').hide();" class="btn btn-default">取 消</button>
+        </form>
+    </div>
+</div>
